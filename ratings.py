@@ -19,6 +19,9 @@ def restaurants_ratings_dict(file):
     new_restaurant = input("What's the restaurant name? ").title()
     new_rating = int(input("What's the rating? "))
 
+    while new_rating > 5 or new_rating < 1:
+        new_rating = int(input("Please enter a number between 1 and 5: "))
+
     dict_restaurants[new_restaurant] = new_rating
 
 
